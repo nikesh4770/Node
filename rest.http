@@ -1,0 +1,43 @@
+GET http://localhost:4770/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJuaWtlc2hhdXRoMi5jb20iLCJpYXQiOjE1OTgyNTcwOTAsImV4cCI6MTU5ODI1NzA5MywiYXVkIjoiNWY0MzY5ZTEyMzI0ODgwZTEwYzQyNTRhIn0.NyTUGsDWUSfxbZCDIL0eLwv3Ox2FFMwN0xPnr05jfwk
+
+###
+
+POST http://localhost:4770/auth/register
+Content-Type: application/json
+
+{
+    "email" : "abc4770@gmail.com",
+    "password" : "123456"
+}
+
+
+###
+
+POST http://localhost:4770/auth/login
+Content-Type: application/json
+
+{
+    "email" : "abc4770@gmail.com",
+    "password" : "123456"
+}
+
+
+###
+
+POST http://localhost:4770/auth/refresh-token
+Content-Type: application/json
+
+{
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJuaWtlc2hhdXRoMi5jb20iLCJpYXQiOjE1OTgyNjczNjksImV4cCI6MTU5ODI2ODI2OSwiYXVkIjoiNWY0MzdkNWNiMWRiYWQyYmUwNjZmZmY0In0.aYdwI9p21ksZkZ2bacawaSDVYszdEQ9fVjvN4bHUcKc"
+}
+
+
+###
+
+DELETE http://localhost:4770/auth/logout
+Content-Type: application/json
+
+{
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJuaWtlc2hhdXRoMi5jb20iLCJpYXQiOjE1OTgyNjczNjksImV4cCI6MTU5ODI2ODI2OSwiYXVkIjoiNWY0MzdkNWNiMWRiYWQyYmUwNjZmZmY0In0.aYdwI9p21ksZkZ2bacawaSDVYszdEQ9fVjvN4bHUcKc"
+}
